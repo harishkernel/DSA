@@ -4,7 +4,7 @@ using pii = pair<pair<int, int>, int>;
 
 class Solution {
 private:
-    vector<vector<pair<int, int>>> build(int n, vector<vector<int>>& flights) {
+    vector<vector<pair<int, int>>> build(int n, const vector<vector<int>>& flights) {
         vector<vector<pair<int, int>>> adj(n);
         for(auto flight: flights) {
             adj[flight[0]].push_back({flight[1], flight[2]});
