@@ -1,8 +1,14 @@
 .vscode
+.venv
 .idea
 
+cmake-build-debug
 test/
 out/
+
+CMakeLists.txt
+new_problem.py
+run_problem.py
 
 *.iml
 *.exe
