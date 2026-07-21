@@ -20,7 +20,6 @@ void __dbg(Head H, Tail... T) {
 void run_case() {
 	int n;
 	cin >> n;
-    int ans = (n >= 10 ? 10 : n);
     /**
      * n = 42, ans = 9
      * n = 33 ans = 10
@@ -28,21 +27,24 @@ void run_case() {
      * n = 13, ans = 12
      * n = 3, ans = 13 
      */
-    if(n < 10) {
-        cout << ans << '\n';
-        return;
-    }
-    int i = 11;
-    // dbg(n);
-    while(i < n) {
-        // dbg(i, ans);
-        ans++;
-        i += 10;
-    }
-    ans = (n%10 == 0 ? ans : ans-1);
-    // dbg(ans);
-    // cout << '\n';
-    
+    // if(n < 10) {
+    //     cout << ans << '\n';
+    //     return;
+    // }
+    // int i = 11;
+    // // dbg(n);
+    // while(i < n) {
+    //     // dbg(i, ans);
+    //     ans++;
+    //     i += 10;
+    // }
+    // ans = (n%10 == 0 ? ans : ans-1);
+    // // dbg(ans);
+    // // cout << '\n';
+    string s = to_string(n);
+    int d = s.length();
+    int first = s[0] - '0';
+    int ans = 9*(d-1) + first;
     cout << ans << '\n';
 }
 
