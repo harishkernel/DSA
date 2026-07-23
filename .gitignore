@@ -7,8 +7,8 @@ test/
 out/
 
 CMakeLists.txt
-new_problem.py
-run_problem.py
 
 *.iml
 *.exe
+
+DSA/in.txt
