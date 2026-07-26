@@ -32,6 +32,10 @@ public:
          */
         int pu = findParent(u);
         int pv = findParent(v);
+        
+        // because if they are anchored to a parent, why would rank++ ???
+        if(pu == pv) return;
+
         if(rank[pu] < rank[pv]) {
             parent[pu] = pv;
         } else if(rank[pu] > rank[pv]) {
