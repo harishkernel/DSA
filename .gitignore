@@ -11,4 +11,5 @@ CMakeLists.txt
 *.iml
 *.exe
 
+Company_wise_leetcode_questions.xlsx
 DSA/in.txt
