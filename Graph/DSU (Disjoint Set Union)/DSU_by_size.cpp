@@ -11,7 +11,7 @@ class DSU {
     vector<int> size, parent;
 public:
     DSU(int n) {
-        size.resize(n+1, 0);
+        size.resize(n+1, 1);
         parent.resize(n+1);
         iota(parent.begin(), parent.end(), 0);
     }
@@ -32,6 +32,9 @@ public:
          */
         int pu = findParent(u);
         int pv = findParent(v);
+        
+        if (pu == pv) return;   // prevent double counting
+
         if(size[pu] < size[pv]) {
             parent[pu] = pv;
             size[pv] += size[pu];
