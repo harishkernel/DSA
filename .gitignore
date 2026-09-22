@@ -5,6 +5,8 @@
 cmake-build-debug
 test/
 out/
+in.txt
+tools/
 
 CMakeLists.txt
 
